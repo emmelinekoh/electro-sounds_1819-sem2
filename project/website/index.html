@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <title>Fake World</title>
+
+    <!-- load style sheets -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <!-- load javascript libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+
+    <!-- 3rd-party libraries here -->
+
+
+  </head>
+  <body>
+		<div class='container'>
+			<header>
+				<ul class='menu'>
+				<li><a href='./index.html'>index</a></li>
+				<li><a href='./fullscreen.html'>fullscreen</a></li>
+				<li><a href='./archive.html'>archive</a></li>
+        <li><a href='./gallery.html'>gallery</a></li>
+				</ul>
+			</header>
+      <div id="main">
+        <div class="landing">
+          <div class="overlay"><h2>Fake World</h2></div>
+          <span id="down">&#8595;</span>
+        </div>
+        <div class="project-info">
+          <h2>Our Fake World</h2>
+          <p>In this website, you will find my coding journey over a time period of 15 weeks. Everything has led up to the conception and creation of the final sketch which is a Fake World I would like to invite you to take a step into. The Fake World is an audio reactive and user interactive sketch, which you can use the Keys 1-4, R, F and basic trackpad functions to play around with.</p>
+          <p>Have a look at my <a href="http://e-lctrnc-msc.tumblr.com/" target="_blank">process log</a>, my <a href="https://editor.p5js.org/emmeline/sketches" target="_blank">p5js sketches</a>, and <a href="https://github.com/emmelinekoh/electro-sounds_1819-sem2" target="_blank">github</a> repo.<p>
+        </div>
+      </div>
+      <footer>
+        <p>
+          A project by Emmeline Koh.<br />
+          2019
+        </p>
+      </footer>
+		</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      }
+
+      $(document).ready( function () {
+        $('#down').on('click',function () {
+          $("html").scrollTop(0);
+          $('html, body').animate({
+            scrollTop: $(".project-info").offset().top
+          }, 1000);
+        });
+      });
+    </script>
+  </body>
+</html>
